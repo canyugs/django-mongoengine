@@ -108,6 +108,9 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [os.path.join(os.path.realpath(os.path.dirname(__file__)), '../templates')],
         'OPTIONS': {
+            'context_processors': [
+                'django.contrib.auth.context_processors.auth'
+            ],
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
